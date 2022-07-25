@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/scss/cart.css">
+    <title>Shopping - Cart</title>
+</head>
+
+<body>
+    <!--Menu Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/images/weatherLogo.png" width="30" height="30" alt="">
+                App
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index.html">Quiz App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/cart.html">Shopping Cart</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <!--Main-->
+    <div class="main">
+        <div class="container-fluid">
+            <div class="body_height">
+                <div class="row">
+                    <div class="col-md-10 col-11 mx-auto">
+                        <div class="row mt-5 mb-5 gx-3">
+                            <!--Left side div-->
+                            <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+                                <div class="card p-4">
+                                    <h2 class="py-4 fw-bold">Cart</h2>
+                                    <div class="row">
+                                        <!--Cart Images Div-->
+                                        <div
+                                            class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                            <img src="/assets/images/ShirtPic1.jpg" class="img-fluid" alt="cart img">
+                                        </div>
+                                        <!--Cart product details-->
+                                        <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                            <div class="row">
+                                                <!--Product Name-->
+                                                <div class="col-6 card-title">
+                                                    <h2 class="mb-4 product_name fw-bold">Black Zara Shirt</h2>
+                                                    <p class="mb-2">SHIRT - BLACK</p>
+                                                    <p class="mb-2">COLOR: BLACK</p>
+                                                    <p class="mb-3">SIZE: M</p>
+                                                </div>
+                                                <!--Quantity increament decreament-->
+                                                <div class="col-6">
+                                                    <ul class="pagination justify-content-end set_quantity">
+                                                        <li class="page-item">
+                                                            <button class="page-link" onclick="decreaseNumber('textbox' , 'itmeval')"><i
+                                                                    class="fa-solid fa-minus"></i></button>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <input type="text" name="" class="page-link" value="0"
+                                                                id="textbox" />
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <button class="page-link" onclick="increaseNumber('textbox' , 'itmeval')"><i
+                                                                    class="fa-solid fa-plus"></i></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--remover move and price-->
+                                            <div class="row">
+                                                <div
+                                                    class="col-8 d-flex justify-content-between remove_wish removeMove">
+                                                    <p><i class="fas fa-trash-alt iconPadding"></i>REMOVE ITEM</p>
+                                                    <p><i class="fas fa-heart iconPadding"></i>MOVE TO WISH LIST</p>
+                                                </div>
+                                                <div class="col-4 d-flex justify-content-end price_money">
+                                                    <h3>$<span id="itmeval">0.00</span></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <!--Second cart product-->
+                                <div class="card p-4">
+                                    <div class="row">
+                                        <!--Cart Images Div-->
+                                        <div
+                                            class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                            <img src="/assets/images/ShirtPic2.jpg" class="img-fluid" alt="cart img">
+                                        </div>
+                                        <!--Cart product details-->
+                                        <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                            <div class="row">
+                                                <!--Product Name-->
+                                                <div class="col-6 card-title">
+                                                    <h2 class="mb-4 product_name fw-bold">Blue Zara Shirt</h2>
+                                                    <p class="mb-2">SHIRT - BLUE</p>
+                                                    <p class="mb-2">COLOR: BLUE</p>
+                                                    <p class="mb-3">SIZE: M</p>
+                                                </div>
+                                                <!--Quantity increament decreament-->
+                                                <div class="col-6">
+                                                    <ul class="pagination justify-content-end set_quantity">
+                                                        <li class="page-item">
+                                                            <button class="page-link" onclick="decreaseNumber('textbox1' , 'itmeval1')"><i
+                                                                    class="fa-solid fa-minus"></i></button>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <input type="text" name="" class="page-link" value="0"
+                                                                id="textbox1" />
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <button class="page-link" onclick="increaseNumber('textbox1' , 'itmeval1')"><i
+                                                                    class="fa-solid fa-plus"></i></button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--remover move and price-->
+                                            <div class="row">
+                                                <div
+                                                    class="col-8 d-flex justify-content-between remove_wish removeMove">
+                                                    <p><i class="fas fa-trash-alt removeMovePadding iconPadding"></i>REMOVE ITEM</p>
+                                                    <p><i class="fas fa-heart iconPadding"></i>MOVE TO WISH LIST</p>
+                                                </div>
+                                                <div class="col-4 d-flex justify-content-end price_money">
+                                                    <h3>$<span id="itmeval1">0.00</span></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Right side div-->
+                            <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                                <div class="right_side p-3 shadow bg-white">
+                                    <h2 class="product_name">The Total Amount </h2>
+                                    <div class="price_indiv d-flex justify-content-between">
+                                        <p>Product Amount</p>
+                                        <p>$<span id="product_total_amt">0.00</span></p>
+                                    </div>
+                                    <div class="price_indiv d-flex justify-content-between">
+                                        <p>Shipping Charges</p>
+                                        <p>$<span id="shipping_charge">50.0</span></p>
+                                    </div>
+                                    <hr />
+                                    <div class="total_amt d-flex justify-content-between fw-bold">
+                                        <p>The total amount (including VAT)</p>
+                                        <p>$<span id="total_cart_amt">0.00</span></p>
+                                    </div>
+                                    <button class="btn btn-primary text-upercase">Checkout</button>
+                                </div>
+                                <!--Discount code-->
+                                <div class="discount_code mt-3 shadow">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <a class="d-flex justify-content-between" data-bs-toggle="collapse"
+                                                href="#collapseExample" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Add a discount code (optional)
+                                                <span><i class="fas fa-chevron-down pt-1"></i></span>
+                                            </a>
+                                            <div class="collapse" id="collapseExample">
+                                                <div class="mt-3">
+                                                    <input type="text" name="" id="discount_code1"
+                                                        class="form-control fw-bold"
+                                                        placeholder="Enter the discount code">
+                                                    <small id="error_trw" class="text-dark mt-3"></small>
+                                                </div>
+                                                <button class="btn btn-primary btn-sm mt-3"
+                                                    onclick="discount_code()">Apply</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Discount code end-->
+                                <div class="mt-3 shadow p-3 bg-white">
+                                    <div class="pt-4">
+                                        <h5 class="mb-4">Expected delivery date between</h5>
+                                        <p>July 29 2022 - July 31 2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!--Footer-->
+<footer class="bg-dark p-2">
+    <p class="container text-center text-light">
+        copyright &copy; ShoppingCartApp.com
+    </p>
+    <script src="/assets/js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</footer>
+
+</html>

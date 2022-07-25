@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/scss/index.css">
+    <title>Samina - Math Quiz App</title>
+</head>
+
+<body>
+    <!--Menu Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/images/weatherLogo.png" width="30" height="30" alt="">
+                App
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Quiz App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/cart.html">Shopping Cart</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <!--main-->
+    <div class="main">
+        <div class="container">
+            <div class="body_height">
+                <!-- start Quiz button -->
+                <div class="start_quiz box_shadow">Start Quiz</div>
+                <!--Quiz Questions Box -->
+                <div class="main_box">
+                    <div class="quiz-box box_shadow inactive">
+                        <h2 class="que_text"></h2>
+                        <div class="quiz-box__options options">
+                            <!-- <div class="option">Angles</div>
+                            <div class="quiz-box__option incorrect">Transversal lines<i class="fa fa-times"></i></div>
+                            <div class="option">Vertex</div>
+                            <div class="option correct">Parallel lines<i class="fa fa-check"></i></div> -->
+                        </div>
+                        <!--Quiz Footer-->
+                        <div class="quiz-footer">
+                            <div class="footer-left">
+                                <span class="count_que"></span>of <span class="total_que"></span> Questions
+                            </div>
+                            <div class="footer-right">
+                                <div class="next-btn inactive">Next Question</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Result Box -->
+                    <div class="main_box">
+                        <div class="result-box box_shadow inactive">
+                            <div class="icon text-center">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h2 class="box_shadow">Result</h2>
+                            <div class="result mt-5 mb-5 text-center">
+                                <h3 class="total-que">Total Questions : <span></span></h3>
+                                <h3 class="right-ans">Right Answers : <span></span></h3>
+                                <h3 class="wrong-ans">Wrong Answers : <span></span></h3>
+                                <h3 class="percentage">Percentage : <span></span></h3>
+                            </div>
+                            <div class="score_text text-center">
+                                <!-- Here I've inserted Score Result from JavaScript -->
+                            </div>
+                            <div class="result-footer">
+                                <div class="again-quiz mx-4">Again Quiz</div>
+                                <div class="exit">Exit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--Footer-->
+<footer class="bg-dark text-dark p-2">
+    <p class="container text-center text-light">
+        copyright &copy; MathQuizApp.com
+    </p>
+    <script src="/assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</footer>
+
+</html>
